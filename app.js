@@ -11,10 +11,7 @@ $(document).ready(function () {
     })
 
     $(".next-btn").click(function () {
-        var currentSlide = $(this).closest(".first-img-slider");
-        var nextSlide = currentSlide.next(".first-img-slider");
-        nextSlide.show();
-        currentSlide.hide();
+        $(".carousel").slick("slickNext");
     });
 
     $('.popup').click(function () {

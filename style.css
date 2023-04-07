@@ -173,16 +173,17 @@ body {
     display: flex !important;
     flex-direction: column;
     align-items: center;
-    margin-left: 34px;
+    margin-left: 30px;
     background-color: white;
     gap: 35px;
-    height: 490px !important;
-    border-radius: 12px;
-    width: 317px;
+    height: 410px !important;
+    width: 314px;
+    padding-top: 20px;
 }
 
 .carousel {
-    border-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 .first-img-slider img {
@@ -209,6 +210,7 @@ body {
 .head {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     width: auto !important;
     gap: 0;
     margin: 0px;
@@ -239,8 +241,14 @@ body {
 .carousel-heading {
     display: flex;
     justify-content: space-between;
-    width: 280px;
+    width: 293px;
     align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    margin-bottom: -4px;
+    margin-top: 0px;
 }
 
 .next-btn {
