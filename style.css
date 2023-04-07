@@ -324,6 +324,30 @@ body {
     width: 40px !important;
 }
 
+@media screen and (min-width: 320px) and (max-width: 400px) {
+    .carousel-heading {
+        width: 280px;
+        overflow: hidden;
+    }
+
+    .first-img-slider {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+
+    .carousel-heading {
+        width: 640px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .first-img-slider {
+        width: 800px;
+    }
+}
+
 @media screen and (min-width: 320px) and (max-width: 800px) {
     .main-container {
         max-width: 100%;
@@ -331,9 +355,14 @@ body {
         padding: 0px 10px;
     }
 
-    .header-container,
-    .footer-container,
     .bottom-text-button {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-container,
+    .footer-container {
         display: flex;
         flex-direction: column;
     }
@@ -352,11 +381,6 @@ body {
 
     .multiple-container {
         grid-template-columns: auto;
-    }
-
-    .carousel-heading {
-        width: 280px;
-        max-width: 100%;
     }
 
     .behind-overlay p {
