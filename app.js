@@ -1,13 +1,13 @@
 $(document).ready(function () {
     $('.carousel').slick({
         variableWidth: true,
-        arrows: true,
+        arrows: false,
         slidesToScroll: 1,
         infinite: true,
         slidesToShow: 1,
-        dots: false,
+        dots: true,
         autoplay: true,
-        speed: 800,
+        autoplaySpeed: 5000,
     })
 
     $(".next-btn").click(function () {
@@ -25,4 +25,10 @@ $(document).ready(function () {
         $(".zoom-img").empty();
         $("body").removeClass("removeScroll")
     });
+
+    if ($("li").hasClass('slick-active')) {
+        $("li").removeClass("passed");
+    } else {
+        $("li").addClass("passed");
+    }
 })

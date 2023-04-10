@@ -136,7 +136,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 225px;
+    height: 217px;
 }
 
 .multiple-container {
@@ -151,7 +151,7 @@ body {
     border-radius: 12px;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 230px;
     width: 100%;
 }
 
@@ -175,7 +175,7 @@ body {
     align-items: center;
     background-color: white;
     gap: 35px;
-    height: 427px !important;
+    height: 410px !important;
     width: 314px;
     padding-top: 20px;
 }
@@ -194,7 +194,7 @@ body {
 .slider-container {
     background-color: rgb(7, 7, 7);
     border-radius: 12px;
-    height: auto;
+    height: 217px;
     width: 312px;
     border-radius: 12px;
 }
@@ -285,6 +285,7 @@ body {
 
 .zoom-img .popup {
     width: 100%;
+    height: auto;
 }
 
 .zoom-img .bg {
@@ -322,6 +323,75 @@ body {
     color: white;
     cursor: pointer;
     width: 40px !important;
+}
+
+.slick-dots {
+    display: flex !important;
+    left: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    top: 0;
+    bottom: 0 !important;
+}
+
+.slick-dots li {
+    background-color: gray;
+    height: 4px !important;
+    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 270px;
+}
+
+.slick-dots li.slick-active {
+    background-color: gray;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.slick-dots li.slick-active:after {
+    content: "";
+    background-color: red;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    animation: progressBar 6s ease-in-out;
+    z-index: 5;
+    top: 0;
+}
+
+@keyframes progressBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.slick-dots li button {
+    height: 0.5rem;
+    display: none !important;
+}
+
+.slick-dots li button:before {
+    content: "";
+    color: gray;
+}
+
+.slick-dotted.slick-slider {
+    margin: 0px !important;
+}
+
+.passed {
+    background-color: red;
 }
 
 @media screen and (min-width: 320px) and (max-width: 400px) {
