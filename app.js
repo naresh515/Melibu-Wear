@@ -6,7 +6,7 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 1,
         dots: false,
-        autoplay: false,
+        autoplay: true,
         speed: 800,
     })
 

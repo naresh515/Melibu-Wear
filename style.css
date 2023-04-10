@@ -33,11 +33,11 @@ body {
 }
 
 .header-container {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 60% 39%;
 }
 
 .footer-container {
-    grid-template-columns: 30% 45% 25%;
+    grid-template-columns: 30% 44% 25%;
 }
 
 .login-container {
