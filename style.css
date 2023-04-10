@@ -177,7 +177,7 @@ body {
     gap: 35px;
     height: 410px !important;
     width: 314px;
-    padding-top: 20px;
+    padding-top: 67px;
 }
 
 .carousel {
@@ -197,6 +197,7 @@ body {
     height: 217px;
     width: 312px;
     border-radius: 12px;
+    position: relative;
 }
 
 .slider-contaier .slider {
@@ -240,14 +241,15 @@ body {
 .carousel-heading {
     display: flex;
     justify-content: space-between;
-    width: 293px;
+    width: 292px;
     align-items: center;
     background-color: white;
     padding: 10px;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
-    margin-bottom: -4px;
-    margin-top: 0px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 
 .next-btn {
@@ -262,7 +264,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 9;
+    z-index: 10;
     display: none;
     position: fixed;
     top: 0;
@@ -331,32 +333,35 @@ body {
     margin: 0 auto;
     max-width: 100%;
     padding: 0;
-    position: absolute;
+    position: relative !important;
     right: 0;
     width: 100%;
     flex-wrap: wrap;
-    top: 0;
+    top: -465px;
     bottom: 0 !important;
+    z-index: 9;
 }
 
 .slick-dots li {
-    background-color: gray;
+    background-color: lightgray;
     height: 4px !important;
     flex: 1;
     position: relative;
     width: 100%;
     max-width: 270px;
+    border-radius: 12px;
 }
 
 .slick-dots li.slick-active {
-    background-color: gray;
+    background-color: lightgray;
     backdrop-filter: blur(10px);
     position: relative;
+    border-radius: 12px;
 }
 
 .slick-dots li.slick-active:after {
     content: "";
-    background-color: red;
+    background-color: black;
     height: 4px;
     left: 0;
     position: absolute;
@@ -364,6 +369,7 @@ body {
     animation: progressBar 6s ease-in-out;
     z-index: 5;
     top: 0;
+    border-radius: 12px;
 }
 
 @keyframes progressBar {
@@ -392,13 +398,13 @@ body {
 
 /* for creating progress bar like instagram */
 
-li:not(.slick-active ~ li):not(li.slick-active) {
-    background: red;
+.slick-dots li:not(.slick-active ~ li):not(li.slick-active) {
+    background: black;
 }
 
 @media screen and (min-width: 320px) and (max-width: 400px) {
     .carousel-heading {
-        width: 280px;
+        width: 265px;
         overflow: hidden;
     }
 
