@@ -25,10 +25,4 @@ $(document).ready(function () {
         $(".zoom-img").empty();
         $("body").removeClass("removeScroll")
     });
-
-    if ($("li").hasClass('slick-active')) {
-        $("li").removeClass("passed");
-    } else {
-        $("li").addClass("passed");
-    }
 })
