@@ -14,10 +14,23 @@ $(document).ready(function () {
         $(".carousel").slick("slickNext");
     });
 
-    $('.popup').click(function () {
-        $(".img-overlay").addClass("img-overlay-open");
-        $(this).clone().appendTo(".zoom-img");
-        $("body").addClass("removeScroll")
+    $('.popup').on('click', function () {
+        $('.img-overlay').addClass('img-overlay-open');
+        var $clone = $(this).clone();
+        $('.zoom-img').empty().append($clone);
+        $('body').addClass('removeScroll');
+
+        setTimeout(function () {
+            $clone.find('.carousel').slick('unslick');
+            $clone.find('.carousel').slick({
+                slidesToScroll: 1,
+                infinite: false,
+                slidesToShow: 4,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 5000
+            });
+        }, 500);
     });
 
     $(".close-btn").click(function () {

@@ -151,7 +151,7 @@ body {
     border-radius: 12px;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 230px;
+    height: 233px;
     width: 100%;
 }
 
@@ -181,8 +181,7 @@ body {
 }
 
 .carousel {
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
+    border-radius: 12px;
 }
 
 .first-img-slider img {
