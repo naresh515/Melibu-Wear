@@ -31,7 +31,7 @@ $(document).ready(function () {
             autoplay: true,
             autoplaySpeed: 5000,
         });
-        
+
         $(".next-btn").click(function () {
             $('.carousel').slick("slickNext");
         });
